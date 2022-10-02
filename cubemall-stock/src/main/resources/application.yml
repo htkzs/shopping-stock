@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: shoppingmall-stock
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/springdb?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
