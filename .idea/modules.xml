@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cubemall-stock/cubemall-order.iml" filepath="$PROJECT_DIR$/cubemall-stock/cubemall-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cubemall-order-juc/cubemall-order-juc.iml" filepath="$PROJECT_DIR$/cubemall-order-juc/cubemall-order-juc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cubemall-remote-service/cubemall-remote-service.iml" filepath="$PROJECT_DIR$/cubemall-remote-service/cubemall-remote-service.iml" />
+    </modules>
+  </component>
+</project>
