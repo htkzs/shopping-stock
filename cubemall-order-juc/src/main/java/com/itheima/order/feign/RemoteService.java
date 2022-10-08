@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Service
 @FeignClient("cubemall-remote-service")
 public interface RemoteService {
@@ -29,4 +31,10 @@ public interface RemoteService {
 
     @RequestMapping("/create/deliver")
     public JSONObject dealDeliver(@RequestBody OrderInfo orderInfo);
+
+    @RequestMapping("/create/order/batch/{orderId}")
+    JSONObject createOrderFast(@PathVariable long orderId);
+
+    @RequestMapping("/create/goods/batch")
+    List<JSONObject> dealGoodsFastBatch(@RequestBody List<JSONObject> orderInfoList);
 }

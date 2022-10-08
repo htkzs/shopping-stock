@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 //这里只是为了模拟多次远程调用而已
 @RestController
 @RequestMapping("/create")
@@ -44,4 +46,16 @@ public class RemoteController {
         JSONObject dealDeliverObject = JSONObject.parseObject(jsonString);
         return dealDeliverObject;
     }
+
+    //根据orderId获取OrderInfo信息
+    @RequestMapping("/order/batch/{orderId}")
+    public JSONObject createOrderFast(@PathVariable long orderId){
+        return remoteService.createOrderFast(orderId);
+    }
+    //批量远程接口调用
+    @RequestMapping("/goods/batch")
+    public List<JSONObject> delGoodsFastBatch(@RequestBody List<JSONObject> orderInfoList){
+        return remoteService.delGoodsFastBatch(orderInfoList);
+    }
+
 }
