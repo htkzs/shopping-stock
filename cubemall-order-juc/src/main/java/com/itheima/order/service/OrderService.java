@@ -202,6 +202,7 @@ public class OrderService {
                 }
             }
         },1000,50,TimeUnit.MILLISECONDS);
+        //启动一个定时任务，每隔50ms运行一次
     }
     public JSONObject JsonObjectOrder(long userId) {
         CartInfo cartInfo = new CartInfo(10001L,"OK");

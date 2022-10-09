@@ -34,6 +34,10 @@ public class squareRoot {
         return (int)sqrt(x,x);
     }
     //参数i就为要求取的一个目标值 为double类型
+    //(i + x/i)/2 的由来可以解释为  如果 12 = 2*6  则2的平法为4 6的平法为36  （2+6）/2 =4 4的平法为 16为更接近于12的一个值
+    /*
+    则如果使用 x 参数代表12 2代表i x/i则为6  (i + x/i)/2 则为4
+     */
     private static double sqrt(double i, int x) {
         double res = (i + x/i)/2;
         if(res == i){
